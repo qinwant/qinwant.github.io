@@ -170,6 +170,107 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-个人博客搭建（hexo框架）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/09/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88hexo%E6%A1%86%E6%9E%B6%EF%BC%89/">个人博客搭建（hexo框架）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/09/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88hexo%E6%A1%86%E6%9E%B6%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-02-09T07:21:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="使用hexo框架"><a href="#使用hexo框架" class="headerlink" title="使用hexo框架"></a>使用hexo框架</h3><h4 id="工具环境准备"><a href="#工具环境准备" class="headerlink" title="工具环境准备"></a>工具环境准备</h4><ul>
+<li>node.js、git</li>
+<li><h4 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h4></li>
+<li>控制台查看node.js是否可用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node -v     &#x2F;&#x2F;查看node版本</span><br><span class="line">npm  -v     &#x2F;&#x2F;查看版本</span><br><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org </span><br><span class="line"> &#x2F;&#x2F;更换源</span><br></pre></td></tr></table></figure></li>
+<li>安装hexo框架<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br><span class="line">hexo -v &#x2F;&#x2F;验证hexo框架是否安装完成</span><br></pre></td></tr></table></figure></li>
+<li>初始化hexo框架（这里开始使用git控制台操作）<br>  <img src="5C3ADC3AE1DD4C3989DF82FC21466E84" alt="image"><br>  1.成功提示：<br>  <img src="C86C2721D98C4179A50423CF0C386BFB" alt="image"><br>  2.注意：init下载会比较慢</li>
+<li>启动hexo框架  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
+<li>将hexo博客部署到GitHub<ol>
+<li>新建仓库new repository</li>
+<li>注意仓库名要设置为：GitHub用户名.github.io</li>
+<li>安装插件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
+<li>配置_config.yml文件（vim _config.yml）<br><img src="596AA902AC7F4038A9F4FB99529CD2E0" alt="image"></li>
+<li>部署到远端<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>修改hexo主题<ol>
+<li>克隆主题<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia</span><br></pre></td></tr></table></figure></li>
+<li><a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有哪些好看的 Hexo 主题</a></li>
+<li>常见配置命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo s  &#x2F;&#x2F;开启本地hexo框架</span><br><span class="line">hexo d  &#x2F;&#x2F;远程部署GitHub</span><br><span class="line">hexo clean  &#x2F;&#x2F;清空hexo缓存</span><br><span class="line">hexo g  &#x2F;&#x2F;  全局配置</span><br></pre></td></tr></table></figure></li>
+<li>操作步骤：<ol>
+<li>将主题克隆到本地后，使用hexo s命令先在本地预览效果<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:4000&#x2F;</span><br></pre></td></tr></table></figure></li>
+<li>预览完效果后，觉得合适即可部署到GitHub<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;先清空本地缓存</span><br><span class="line">hexo clean</span><br><span class="line">&#x2F;&#x2F;再部署</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
+<li>查看部署效果<br><img src="078E497D929B4606BD0EEB85DD899AD0" alt="image"><br><img src="E05F318826204F35BBE4AADDACFA976B" alt="image"></li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/09/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88hexo%E6%A1%86%E6%9E%B6%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-第一次使用hexo框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -402,6 +503,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
